@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "python-project-template"
+version = "0.1.0"
+description = ""
+authors = ["Cameron Wong"]
+readme = "README.md"
+packages = [{include = "python_project_template"},
+            { include = "python_project_template/**/*.py" }]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=7.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = "src"
