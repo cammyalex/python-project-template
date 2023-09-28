@@ -1,8 +1,6 @@
 install:
 	poetry install
 
-database:
-
 development:
 	poetry run uvicorn app.main:app --reload
 
