@@ -4,8 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Cameron Wong"]
 readme = "README.md"
-packages = [{include = "python_project_template"},
-            { include = "python_project_template/**/*.py" }]
+
 
 [tool.poetry.dependencies]
 python = ">=3.8.1"
@@ -18,6 +17,10 @@ isort = "^5.12.0"
 flake8 = "^6.1.0"
 bandit = "^1.7.5"
 safety = "^2.3.5"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "default"
 
 [build-system]
 requires = ["poetry-core"]
