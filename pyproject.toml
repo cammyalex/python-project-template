@@ -4,7 +4,8 @@ version = "0.1.0"
 description = ""
 authors = ["Cameron Wong"]
 readme = "README.md"
-
+packages = [{include = "python_project_template"},
+            { include = "python_project_template/**/*.py" }]
 
 [tool.poetry.dependencies]
 python = ">=3.8.1"
