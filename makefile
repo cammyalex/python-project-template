@@ -8,9 +8,9 @@ test:
 	poetry run pytest tests
 
 quality:
-	poetry run black
+	poetry run black .
 	poetry run isort . --profile black
-	poetry run flake8 
+	poetry run flake8 .
 
 secure:
 	poetry run bandit -r
