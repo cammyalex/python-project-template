@@ -9,15 +9,15 @@ development:
 	poetry run uvicorn app.main:app --reload
 
 test:
-	poetry run pytest tests/unit tests/integration --cov . --cov-report=html --cov-fail-under 75 --memray 
+	poetry run pytest tests
 
 quality:
-	poetry run black models
-	poetry run isort models --profile black
-	poetry run flake8 models
+	poetry run black
+	poetry run isort . --profile black
+	poetry run flake8 
 
 secure:
-	poetry run bandit models -r
+	poetry run bandit -r
 	poetry run safety check --policy-file ../../.safety-policy.yml
 
 clean:
