@@ -1,5 +1,3 @@
-.PHONY: install database test quality secure clean
-
 install:
 	poetry install
 
